@@ -1,13 +1,48 @@
+# Informational URLs
+
+## Tradingview Lightweight Charts Documentation
+
+https://www.tradingview.com/lightweight-charts/
+
+## Tradingview Lightweight Charts Github
+
+https://github.com/tradingview/lightweight-charts
+
+## Binance-Official-API-Docs github
+
+https://github.com/binance-exchange/binance-official-api-docs
+
+## Binance API Docs
+
+https://binance-docs.github.io/apidocs/futures/en/#compressed-aggregate-trades-list
+
+## Python-Binance documentation
+
+https://python-binance.readthedocs.io/en/latest/
+
+## Python Docs Library
+
+https://docs.python.org/3/library/index.html
+
+## TA-LIB Library
+
+https://ta-lib.org/
+
+## Python library downloads for Windows
+
+https://www.lfd.uci.edu/~gohlke/pythonlibs/#ta-lib
+https://blog.quantinsti.com/install-ta-lib-python/#windows
+
 # Base URL for Web Socket Streams
 
 wss://stream.binance.com:9443
 
-# BTCUSDT streams
+### BTCUSDT streams
 
 wss://stream.binance.com:9443/ws/btcusdt@trade
 wss://stream.binance.com:9443/ws/btcusdt@kline_5m
 
-# Trade Streams
+### Trade Streams
 
 The Trade Streams push raw trade information; each trade has a unique buyer and seller.
 
@@ -31,7 +66,7 @@ Payload:
 "M": true // Ignore
 }
 
-# Kline/Candlestick Streams
+### Kline/Candlestick Streams
 
 The Kline/Candlestick Stream push updates to the current klines/candlestick every second.
 

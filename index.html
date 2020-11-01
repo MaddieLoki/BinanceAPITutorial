@@ -1,25 +1,44 @@
 <html>
     <head>
         <title>Coinview</title>
+        <script src="https://unpkg.com/lightweight-charts/dist/lightweight-charts.standalone.production.js"></script>
     </head>
 
     <body>
         <h2>Trades</h2>
         
+        <div id="chart"></div>
         <div id="trades"></div>
+
+        <h3>Settings</h3>
+        
+        <div id="settings">
+            <div>
+                RSI
+                <input type="text" id="rsi_length" name="rsi_length" placeholder="14" />
+                Over Bought
+                <input type="text" id="rsi_overbought" name="rsi_overbought" placeholder="70" />
+                Over Sold
+                <input type="text" id="rsi_oversold" name="rsi_oversold" placeholder="30" />
+            </div>
+        </div>
 
         <script>
         var binanceSocket = new WebSocket("wss://stream.binance.com:9443/ws/btcusdt@trade");
         //console.log(BinanceSocket);
         
         var tradeDiv = document.getElementById('trades')
-
+        
         binanceSocket.onmessage = function (event) {
         //console.log(event.data);
         var messageObject = JSON.parse(event.data)
         tradeDiv.append(messageObject.p)
+        tradeDiv
 
         }
+       
         </script>
+
+        <script src="chart.js"></script>
     </body>
 </html>
