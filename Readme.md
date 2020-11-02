@@ -33,6 +33,17 @@ https://ta-lib.org/
 https://www.lfd.uci.edu/~gohlke/pythonlibs/#ta-lib
 https://blog.quantinsti.com/install-ta-lib-python/#windows
 
+## Flask library for Python
+
+https://flask.palletsprojects.com/en/1.1.x/quickstart/
+_To run in windows_
+
+- Install python-dotenv
+- Create new file .flaskenv
+  - add line: FLASK_APP=app.py
+  - add line: FLASK_ENV=development
+- Save and do: flask run
+
 # Base URL for Web Socket Streams
 
 wss://stream.binance.com:9443

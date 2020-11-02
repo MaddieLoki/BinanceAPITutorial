@@ -1,5 +1,5 @@
 import numpy
-import talib
+import talib as ta
 from numpy import genfromtxt
 
 my_data = genfromtxt('BTCUSDT_15min.csv', delimiter=',')
@@ -8,5 +8,5 @@ my_data = genfromtxt('BTCUSDT_15min.csv', delimiter=',')
 close = my_data[:, 4]
 # print(close)
 
-output = talib.RSI(close, timeperiod=14)
+output = ta.RSI(close, timeperiod=14)
 print(output)
