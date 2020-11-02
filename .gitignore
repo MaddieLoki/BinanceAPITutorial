@@ -1,5 +1,6 @@
 # API Keys and Secrets
-BinanceAPI.py
+config.py
+binanceAPI.py
 
 # Dependency directories
 node_modules/
