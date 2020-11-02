@@ -1,6 +1,10 @@
 # API Keys and Secrets
 BinanceAPI.py
 
+# Dependency directories
+node_modules
+jspm_packages/
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
@@ -176,10 +180,6 @@ bower_components
 
 # Compiled binary addons (https://nodejs.org/api/addons.html)
 build/Release
-
-# Dependency directories
-node_modules/
-jspm_packages/
 
 # Snowpack dependency directory (https://snowpack.dev/)
 web_modules/
