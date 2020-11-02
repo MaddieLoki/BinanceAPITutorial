@@ -1,11 +1,11 @@
 from flask import Flask, render_template
-import config
+import BinanceAPI
 import csv
 from binance.client import Client
 
 app = Flask(__name__)
 
-client = Client(config.API_KEY, config.API_SECRET)
+client = Client(BinanceAPI.API_KEY, BinanceAPI.API_SECRET)
 
 
 @app.route('/')
