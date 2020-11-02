@@ -2,7 +2,7 @@
 BinanceAPI.py
 
 # Dependency directories
-node_modules
+node_modules/
 jspm_packages/
 
 # Byte-compiled / optimized / DLL files
