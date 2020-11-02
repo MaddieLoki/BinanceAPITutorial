@@ -1,6 +1,8 @@
 # API Keys and Secrets
 config.py
 binanceAPI.py
+.git.bfg-report/
+bfg-1.13.0.jar
 
 # Dependency directories
 node_modules/
