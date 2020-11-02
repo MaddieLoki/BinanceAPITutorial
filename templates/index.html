@@ -10,6 +10,58 @@
         <div id="chart"></div>
         <div id="trades"></div>
 
+        <div id="symbols">
+            <h2>Trading Pairs</h2>
+
+            <div id="btcPairs">
+            <lable for="btcPairs">BTC Trading Pairs</lable>
+            <select name="btcTradingPair" id="btcTradingPair">
+            {% for symbol in symbols|sort(attribute="symbol") %}
+                {% if 'BTC' in symbol['symbol'] %}
+                    <option value="{{ symbol['symbol'] }}">{{ symbol['symbol'] }}</option>
+                {% endif %}
+            {% endfor %}
+            </select>
+            </div>
+            
+            <div id="ethPairs">
+            <lable for="ethPairs">ETH Trading Pairs</lable>
+            <select name="ethTradingPair" id="ethTradingPair">
+            {% for symbol in symbols|sort(attribute="symbol") %}
+                {% if 'ETH' in symbol['symbol'] %}
+                    <option value="{{ symbol['symbol'] }}">{{ symbol['symbol'] }}</option>
+                {% endif %}
+            {% endfor %}
+            </select>
+            </div>
+
+            <div id="usdtPairs">
+                <lable for="usdtPairs">USDT Trading Pairs</lable>
+                <select name="usdtTradingPair" id="usdtTradingPair">
+                {% for symbol in symbols|sort(attribute="symbol") %}
+                    {% if 'USDT' in symbol['symbol'] %}
+                        <option value="{{ symbol['symbol'] }}">{{ symbol['symbol'] }}</option>
+                    {% endif %}
+                {% endfor %}
+                </select>
+                </div>
+        </div>
+
+        <div id="my_balances">
+            <h2>Balances</h2>
+            <table>
+                {% for balance in my_balances %}
+                    {% if balance['free'] != '0.00000000' %}
+                    <tr>
+                        <td><strong>{{ balance['asset'] }}</strong></td>
+                        <td>{{ balance['free'] }}</td>
+                    </tr>
+                    {% endif %}
+                {% endfor %}
+            </table>
+
+        </div>
+
         <h3>Settings</h3>
         
         <div id="settings">
